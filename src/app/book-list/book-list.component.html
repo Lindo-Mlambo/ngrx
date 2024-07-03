@@ -1,0 +1,9 @@
+@for(book of books; track book.id) {
+<div class="book-item">
+  <div class="book-info">
+    <strong>{{ book.volumeInfo.title }}</strong>
+    <span>{{ book.volumeInfo.authors }}</span>
+  </div>
+  <button type="button" (click)="add.emit(book.id)">Add to collection</button>
+</div>
+}
